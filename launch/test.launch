@@ -1,0 +1,32 @@
+<launch>
+    <arg name="mavros_prefix" default="/mavros"/>
+    <arg name="camera_topic" default="/uav_camera/image_raw_down"/>
+    <arg name="headless" default="true"/>
+    <arg name="debug" default="false"/>
+
+<!--     <include file="$(find cps_challenge_2020)/launch/qualifying.launch"> -->
+<!--     </include> -->
+
+<!--     <node pkg="gazebo_ros_link_attacher" type="attach.py" name="attach"/> -->
+
+<!--     <node pkg="tf2_ros" type="static_transform_publisher" name="camera" args="0.1 0 0 1.57 3.14 0  base_link camera" /> -->
+    <node pkg="test" type="publisher.py" name="test_pub" />
+
+<!--     <node name="dragonfly" pkg="dragonfly" type="qualifying" output="screen" required="true" unless="$(arg debug)"> -->
+<!--         <param name="mavros_prefix" type="str" value="$(arg mavros_prefix)"/> -->
+<!--         <param name="simulation" type="bool" value="true"/> -->
+<!--         <param name="camera_topic" type="str" value="$(arg camera_topic)"/> -->
+<!--         <param name="search_lat" type="double" value="37.4600529"/> -->
+<!--         <param name="search_long" type="double" value="-118.4446899"/> -->
+<!--         <param name="search_alt" type="double" value="10"/> -->
+<!--         <param name="drop_lat" type="double" value="103"/> -->
+<!--         <param name="drop_long" type="double" value="-25"/> -->
+<!--         <param name="drop_height" type="double" value="1"/> -->
+<!--         <param name="flight_height" type="double" value="5"/> -->
+<!--     </node> -->
+
+<!--     <node name="hsv_detection" pkg="dragonfly" type="hsv_detection" output="screen"> -->
+<!--         <param name="camera_topic" type="str" value="$(arg camera_topic)"/> -->
+<!--         <param name="headless" type="bool" value="$(arg headless)"/> -->
+<!--     </node> -->
+</launch>
